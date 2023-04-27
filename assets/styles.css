@@ -21,16 +21,14 @@ html {
 
 .logo {
   background-color: #e5c4d6;
-  padding-left: 50px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .search-container {
   display: flex;
   justify-content: center;
   margin-top: 11px;
+  margin-bottom: 10px;
 }
 
 .search-container input[type=text] {
@@ -73,16 +71,45 @@ html {
   justify-content: center;
 }
 
-.jumbotron {
-  height: 500px;
-  background-size: cover;
-  background-position: center;
+.navbar2 {
+  background-color: #e5c4d6;
+  height: 40px;
+}
+
+.navbar-list {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  margin-right: 10px;
+}
+.navbar-item a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.navbar-item a:hover {
+  background-color: #ccc;
+}
+
+.jumbotron {
+  height: 500px;
+  border-radius: 0%;
+  background-size: cover;
+  background-position: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
-  text-shadow: 2px 2px #e5c4d6;
+  color: #00386b;
+  text-shadow: 1px 1px #e5c4d6;
 }
 
 .jumbotron h1 {
@@ -91,7 +118,7 @@ html {
 }
 
 .jumbotron p {
-  font-size: 2em;
+  font-size: 15px;
   margin-bottom: 2em;
 }
 
@@ -149,11 +176,34 @@ h2 {
   padding: 10px 10px 10px 10px;
 }
 
+h3 {
+  background-color: #e5c4d6;
+  color: #075dad;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  text-align: center;
+}
+
 h4 {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #e5c4d6;
   font-size: 12px;
   font-style: oblique;
+  text-align: center;
+}
+
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #00386b;
+  font-size: 20px;
+}
+
+#textojuguetes p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  color: #00386b;
 }
 
 .toys-container {
@@ -245,18 +295,12 @@ h4 {
   padding: 20px;
 }
 
-h3 {
-  background-color: #e5c4d6;
-  color: #075dad;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: lighter;
-  font-size: 25px;
-  text-align: center;
-}
-
 video {
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
 }
 
 audio {
@@ -299,20 +343,14 @@ audio {
 }
 .border {
   background-color: #e5c4d6;
-  background: -webkit-linear-gradient(70deg, #e5c4d6, #ccc);
+  background: -webkit-linear-gradient(70deg, #e5c4d6, #fff);
   padding-top: 50px;
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 10px;
   color: #00386b;
-  font-style: oblique;
-  text-shadow: #075dad 0px 0px 2px;
-}
-
-.border {
-  height: 150px;
-  width: 100%;
-  background-color: #e5c4d6;
+  font-style: normal;
+  text-shadow: #00386b 0px 0px 3px;
 }
 
 #location {
@@ -330,7 +368,18 @@ audio {
   width: auto;
 }
 
+@media (max-width: 767px) {
+  #grilla {
+    grid-template-columns: 1fr;
+  }
+}
 /* Estilo por defecto para el placeholder */
+::-moz-placeholder {
+  color: #ccc;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 ::placeholder {
   color: #ccc;
   font-size: 12px;
@@ -340,6 +389,11 @@ audio {
 
 /* Ajuste de estilo para pantallas pequeñas */
 @media (max-width: 768px) {
+  ::-moz-placeholder {
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   ::placeholder {
     font-size: 10px;
     text-overflow: ellipsis;
@@ -351,11 +405,17 @@ audio {
 }
 
 .presentacion {
-  margin: 10px 10px 10px 10px;
-  color: #00386b;
+  background-color: #e5c4d6;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-style: normal;
+}
+.presentacion p {
+  background-color: #e5c4d6;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+  color: #00386b;
 }
 
 #footer {
@@ -379,16 +439,64 @@ audio {
   padding: 30px;
 }
 
-.subir {
-  height: 50px;
-  width: 50px;
-  color: #075dad;
-  position: fixed;
-  bottom: 60px;
-  right: 40px;
+.irarriba {
+  font: Georgia, "Times New Roman", Times, serif;
+  color: #e5c4d6;
+  margin-top: 5px;
+  text-decoration: none;
   text-align: center;
-  font-size: 25px;
-  line-height: 10px;
+  font-size: 10px;
+  line-height: 5px;
 }
 
-/*# sourceMappingURL=styles.css.map */
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #e5c4d6;
+}
+
+.box {
+  width: calc(75% - 5px);
+  height: 150px;
+  opacity: 90%;
+  background-color: #f6fca1;
+  margin: 0px 2px 2px 0px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #00386b;
+}
+.box a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #00386b;
+  font-weight: normal;
+}
+.box a:hover {
+  background-color: #f5e2e6;
+  opacity: 50%;
+}
+.box:nth-child(1) {
+  background-image: url("..//assets/Imagenes/contacto1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box:nth-child(2) {
+  background-image: url("..//assets/Imagenes/contacto2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box:nth-child(3) {
+  background-image: url("..//assets/Imagenes/contacto3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}/*# sourceMappingURL=styles.css.map */

@@ -51,16 +51,15 @@ html {
 
 .logo {
     background-color: $color1;
-    padding-left: 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 50px;
-}
+    box-sizing: border-box;
+        }
+
 
 .search-container {
     display: flex;
     justify-content: center;
     margin-top: 11px;
+    margin-bottom: 10px;
 }
 
 .search-container input[type=text] {
@@ -103,16 +102,47 @@ html {
     justify-content: center;
 }
 
-.jumbotron {
-    height: 500px;
-    background-size: cover;
-    background-position: center;
+.navbar2 {
+    background-color: $color1;
+    height: 40px;
+  }
+  
+  .navbar-list {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-item {
+    margin-right: 10px;
+  
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: $color4;
+      }
+    }
+  }
+
+.jumbotron {
+    height: 500px;
+    border-radius: 0%;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px $color1;
+    color: $color3;
+    text-shadow: 1px 1px $color1;
 }
 
 .jumbotron h1 {
@@ -121,7 +151,7 @@ html {
 }
 
 .jumbotron p {
-    font-size: 2em;
+    font-size: 15px;
     margin-bottom: 2em;
 }
 
@@ -174,8 +204,6 @@ h2 {
     }
 }
 
-
-
 .row {
     font-family: $fuenteprincipal;
     color: $color2;
@@ -183,11 +211,37 @@ h2 {
     padding: 10px 10px 10px 10px;
 }
 
+h3 {
+    background-color: $color1;
+    color: $color2;
+    font-family: $fuenteprincipal;
+    font-weight: lighter;
+    font-size: 25px;
+    text-align: center;
+}
+
 h4 {
     font-family: $fuentesecundaria;
     color: $color1;
     font-size: 12px;
     font-style: oblique;
+    text-align: center;
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #00386b;
+    font-size: $size20;
+}
+
+#textojuguetes{
+    p{font-family: $fuenteprincipal;
+        font-size: 15px;
+        color: $color3;
+
+    }
+    
 }
 
 .toys-container {
@@ -281,18 +335,14 @@ h4 {
     padding: $size20;
 }
 
-h3 {
-    background-color: $color1;
-    color: $color2;
-    font-family: $fuenteprincipal;
-    font-weight: lighter;
-    font-size: 25px;
-    text-align: center;
-}
+
 
 video {
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
 }
 
 audio {
@@ -337,25 +387,15 @@ audio {
 
 .border {
     background-color: $color1;
-    background: -webkit-linear-gradient(70deg, $color1, $color4);
+    background: -webkit-linear-gradient(70deg, $color1, #fff);
     padding-top: 50px;
     text-align: center;
     font-family: $fuenteprincipal;
     font-size: 10px;
     color: $color3;
-    font-style: oblique;
-    text-shadow: $color2 0px 0px 2px;
+    font-style: normal;
+    text-shadow: $color3 0px 0px 3px;
 
-}
-
-@mixin sizes ($width, $height, $bgcolor) {
-    height: $height;
-    width: $width;
-    background-color: $bgcolor;
-}
-
-.border {
-    @include sizes (100%, 150px, $color1)
 }
 
 #location {
@@ -363,14 +403,22 @@ audio {
 }
 
 #Consulta {
-    font-family: $fuenteprincipal;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     text-align: center;
     align-items: center;
     font-size: 10px;
-    color: $color3;
+    color: #00386b;
     font-style: oblique;
     text-shadow: #075dad 0px 0px 2px;
     width: auto;
+}
+
+
+
+@media (max-width: 767px) {
+    #grilla {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Estilo por defecto para el placeholder */
@@ -395,11 +443,18 @@ audio {
 }
 
 .presentacion {
-    margin: 10px 10px 10px 10px;
-    color: $color3;
+    background-color: $color1;
+    text-align: center;
     font-family: $fuenteterciaria;
     font-size: 12px;
     font-style: normal;
+    p{
+        background-color: $color1;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        color: #00386b;
+    }
+    
 }
 
 #footer {
@@ -423,14 +478,71 @@ audio {
     padding: 30px;
 }
 
-.subir {
-    height: 50px;
-    width: 50px;
-    color: $color2;
-    position: fixed;
-    bottom: 60px;
-    right: 40px;
+.irarriba {
+    font: $fuentesecundaria;
+    color: #e5c4d6;
+    margin-top: 5px;
+    text-decoration: none;
     text-align: center;
-    font-size: 25px;
-    line-height: 10px;
+    font-size: 10px;
+    line-height: 5px;
 }
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: $color1;
+    
+  }
+  
+  .box {
+    width: calc(75% - 5px);
+    height: 150px;
+    opacity: 90%;
+    background-color: #f6fca1;
+    margin: 0px 2px 2px 0px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: $fuenteprincipal;
+    font-size: 12px;
+    color: $color3;
+  
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: $color3;
+      font-weight: normal;
+  
+      &:hover {
+        background-color: #f5e2e6;
+        opacity: 50%;
+      }
+    }
+  
+    &:nth-child(1) {
+      background-image: url('..//assets/Imagenes/contacto1.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    &:nth-child(2) {
+      background-image: url('..//assets/Imagenes/contacto2.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  
+    &:nth-child(3) {
+      background-image: url('..//assets/Imagenes/contacto3.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
